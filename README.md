@@ -1,5 +1,4 @@
-# IDEaS Challenge 
-
+# Barrett-WAM-Haptic-Wrist
 
 # Usage
 ```bash
