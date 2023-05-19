@@ -1,0 +1,6 @@
+[submodule "packages/wam_common"]
+	path = packages/wam_common
+	url = git@github.com:ualberta-robotics/wam_common.git
+[submodule "packages/differential-gear-wrist"]
+	path = packages/differential-gear-wrist
+	url = git@github.com:JustinValentine/differential-gear-wrist.git
