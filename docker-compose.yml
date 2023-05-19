@@ -1,1 +1,16 @@
 services:
+  differential-gear-wrist:
+    build: .
+    environment:
+      DISPLAY: $DISPLAY
+      # Set ROS environment variables for the remote master
+      ROS_MASTER_URI: ${ROS_MASTER_URI_SET}
+      ROS_IP: ${ROS_IP_SET}
+    command: roslaunch --wait differential-gear-wrist.launch rate:=0.2
+    network_mode: host
+    privileged: true
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/root/.Xauthority
+      - ./packages/differential-gear-wrist:/root/catkin_ws/src/differential-gear-wrist
+      - ./launch/differential-gear-wrist.launch:/root/catkin_ws/differential-gear-wrist.launch
